@@ -22,3 +22,12 @@ const adminRoutes = require('./routes/admin')
 app.use(adminRoutes)
 ```
 
+* A 404 page can be added by putting the following at the bottom of app.js
+
+```
+app.use((req, res, next) => {
+	res.status(404)
+	res.send('<h1>Page not found</h1>')
+})
+```
+
